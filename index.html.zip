@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vídeo com PDF automático</title>
+</head>
+<body>
+  <h2>Assista ao vídeo:</h2>
+
+  <video id="meuVideo" width="640" controls>
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <script>
+    const video = document.getElementById('meuVideo');
+    video.addEventListener('ended', function () {
+      window.open('arquivo.pdf', '_blank');
+    });
+  </script>
+</body>
+</html>
